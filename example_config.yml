@@ -1,0 +1,27 @@
+
+baguette:
+    client:
+        id: client_id
+        secret: client_secret
+    scope: [openid, profile, email]
+    device_endpoint: https://provider.com/devicecode
+    token_endpoint: https://provider.com/token
+    userinfo_endpoint: https://provider.com/userinfo
+
+qr:
+    before_line: ""
+    after_line: ""
+    big: false
+    inverse: false
+
+texts:
+    prompt: |
+        Authenticate at
+        -----------------
+        {url}
+        -----------------
+        With code: {code}
+        -----------------
+        {qr}
+        Hit enter when you authenticate
+
