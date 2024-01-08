@@ -1,12 +1,8 @@
 
 baguette:
-    client:
-        id: client_id
-        secret: client_secret
-    scope: [openid, profile, email]
-    device_endpoint: https://provider.com/devicecode
-    token_endpoint: https://provider.com/token
-    userinfo_endpoint: https://provider.com/userinfo
+    server:
+        id: server_id
+    api_endpoint: https://app-572ff0d7-ba03-444b-8156-d9c8d804b9a9.cleverapps.io
 
 qr:
     before_line: ""
@@ -19,8 +15,6 @@ texts:
         Authenticate at
         -----------------
         {url}
-        -----------------
-        With code: {code}
         -----------------
         {qr}
         Hit enter when you authenticate

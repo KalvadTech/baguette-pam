@@ -1,0 +1,23 @@
+[env]
+# supports arbitrary env vars so rtx can be used like direnv/dotenv
+
+[tools]
+python = {version='3.12', virtualenv='env'}
+nodejs = '18'
+
+[tasks.npm_install]
+description = 'Install all npm dependencies'
+run = "npm install"
+
+[tasks.pip_install]
+description = 'Install all pip dependencies'
+run = "pip install -r requirements.txt"
+
+[tasks.compile_messages]
+description = 'Install all pip dependencies'
+run = "python manage.py compilemessages"
+depends = ['pip_install']
+
+[tasks.install]
+description = 'Install all dependencies'
+depends = ['npm_install', 'pip_install', 'compile_messages']
